@@ -22,7 +22,9 @@ from my_blog import testdb
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('testdb',testdb.testdb),
+    # path('',views.home),
+    # path('<int:my_args>/',views.detail,name='detail'),        #r'^(?P<my_args>d+)/$'不知为何不行    '<int:my_args>/'
+    path('test/',views.test),
     path('',views.home),
-    path('<int:my_args>/',views.detail,name='detail'),        #r'^(?P<my_args>d+)/$'不知为何不行    '<int:my_args>/'
-
+    path('<id>/',views.detail,name='detail')
 ]

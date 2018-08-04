@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+
+    <title>adnap7 blog</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="http://picturebag.qiniudn.com/blog.css">
+</head>
+
+<body>
+    <div id="layout" class="pure-g">
+
+        <div class="sidebar pure-u-1 pure-u-md-1-4" style="text-align: center;">
+            <h1 class="brand-title" style="margin-top: 70%;">adnap7 blog</h1>
+            <h2 class="brand-tagline">雪忆 - Snow Memory</h2>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="https://github.com/ADNAP7">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="https://blog.csdn.net/ADNAP7">CSDN</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content pure-u-1 pure-u-md-3-4">
+            <div>
+                {% block content %}
+                {% endblock %}
+                <div class="footer">
+                    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                        <ul>
+                            <li><a href="#">About Me</a></li>
+                            <li><a href="https://blog.csdn.net/ADNAP7">CSDN</a> </li>
+                            <li><a href="https://github.com/ADNAP7">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
