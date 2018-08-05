@@ -23,8 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('testdb',testdb.testdb),
     # path('',views.home),
-    # path('<int:my_args>/',views.detail,name='detail'),        #r'^(?P<my_args>d+)/$'不知为何不行    '<int:my_args>/'
+    # path('<int:my_args>/',views.detail,name='detail'),        #r'^(?P<my_args>d+)/$'不知为何不行    '<int:my_args>/' 将访问的浏览器地址的参数传给函数detail
     path('test/',views.test),
-    path('',views.home),
-    path('<id>/',views.detail,name='detail')
+    path('',views.home,name='home'),
+    path('<id>/',views.detail,name='detail'),                                                       #{% url "detail" id=post.id %}将参数先由正则表达式取出，再传到函数detail
 ]

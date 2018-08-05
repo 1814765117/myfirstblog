@@ -13,7 +13,7 @@ from article.models import Article
 # def detail(request,my_args):
 #     # return HttpResponse("You're looking at my_args %s." % my_args)              #该句语法像极了c中的输出语句
 #
-#     post = Article.objects.all()[int(my_args)]                                    #检索一个
+#     post = Article.objects.all()[int(my_args)]                                    #检索一个       这是得到全部的article后取第几个article
 #     str = ("title=%s,category=%s,date_time=%s,content=%s" % (post.title, post.category, post.date_time, post.content))
 #     return HttpResponse(str)
 
@@ -26,7 +26,7 @@ def home(request):
 
 def detail(request,id):
     try:
-        post=Article.objects.get(id=str(id))
+        post=Article.objects.get(id=str(id))                                        #这是取id=...的那个article
     except Article.DoesNotExist:
         raise Http404
     return render(request,'post.html',{'post':post})
